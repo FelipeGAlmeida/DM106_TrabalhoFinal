@@ -142,3 +142,5 @@ c:\users\felipe g. almeida\source\repos\DM106_TF\DM106_TF\obj\Debug\DM106_TF.csp
 c:\users\felipe g. almeida\source\repos\DM106_TF\DM106_TF\obj\Debug\DM106_TF.csproj.CopyComplete
 c:\users\felipe g. almeida\source\repos\DM106_TF\DM106_TF\obj\Debug\DM106_TF.dll
 c:\users\felipe g. almeida\source\repos\DM106_TF\DM106_TF\obj\Debug\DM106_TF.pdb
+C:\Users\Felipe G. Almeida\source\repos\DM106_TF\DM106_TF\obj\Debug\DM106_TF.Migrations.AddProducts.resources
+C:\Users\Felipe G. Almeida\source\repos\DM106_TF\DM106_TF\obj\Debug\DM106_TF.csproj.GenerateResource.cache
