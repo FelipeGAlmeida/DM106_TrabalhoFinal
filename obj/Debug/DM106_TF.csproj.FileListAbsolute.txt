@@ -137,10 +137,12 @@ c:\users\felipe g. almeida\source\repos\DM106_TF\DM106_TF\bin\pt-br\Microsoft.As
 c:\users\felipe g. almeida\source\repos\DM106_TF\DM106_TF\bin\pt-br\Microsoft.AspNet.Identity.Owin.resources.dll
 c:\users\felipe g. almeida\source\repos\DM106_TF\DM106_TF\bin\pt-br\Microsoft.AspNet.Identity.EntityFramework.resources.dll
 c:\users\felipe g. almeida\source\repos\DM106_TF\DM106_TF\bin\pt-br\System.Web.Http.Owin.resources.dll
-c:\users\felipe g. almeida\source\repos\DM106_TF\DM106_TF\obj\Debug\DM106_TF.csprojAssemblyReference.cache
 c:\users\felipe g. almeida\source\repos\DM106_TF\DM106_TF\obj\Debug\DM106_TF.csproj.CoreCompileInputs.cache
 c:\users\felipe g. almeida\source\repos\DM106_TF\DM106_TF\obj\Debug\DM106_TF.csproj.CopyComplete
 c:\users\felipe g. almeida\source\repos\DM106_TF\DM106_TF\obj\Debug\DM106_TF.dll
 c:\users\felipe g. almeida\source\repos\DM106_TF\DM106_TF\obj\Debug\DM106_TF.pdb
 C:\Users\Felipe G. Almeida\source\repos\DM106_TF\DM106_TF\obj\Debug\DM106_TF.Migrations.AddProducts.resources
 C:\Users\Felipe G. Almeida\source\repos\DM106_TF\DM106_TF\obj\Debug\DM106_TF.csproj.GenerateResource.cache
+C:\Users\Felipe G. Almeida\source\repos\DM106_TF\DM106_TF\obj\Debug\DM106_TF.Migrations.AddOrderAndOrderItem.resources
+C:\Users\Felipe G. Almeida\source\repos\DM106_TF\DM106_TF\obj\Debug\DM106_TF.csprojAssemblyReference.cache
+C:\Users\Felipe G. Almeida\source\repos\DM106_TF\DM106_TF\obj\Debug\DM106_TF.Migrations.AddRules1.resources

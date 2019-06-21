@@ -45,11 +45,11 @@ namespace DM106_TF.Controllers
                 return BadRequest();
             }
 
-            if (db.Products.Where(p => p.codigo == product.codigo).Count() > 0) {
+            if (db.Products.Where(p => (p.codigo == product.codigo) && (p.Id != id)).Count() > 0) {
                 return StatusCode(HttpStatusCode.Forbidden);
             }
 
-            if (db.Products.Where(p => p.modelo == product.modelo).Count() > 0) {
+            if (db.Products.Where(p => (p.modelo == product.modelo) && (p.Id != id)).Count() > 0) {
                 return StatusCode(HttpStatusCode.Forbidden);
             }
 
