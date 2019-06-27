@@ -66,17 +66,34 @@ namespace DM106_TF.Controllers
         // PUT: api/Orders/5
         [Authorize]
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutOrder(int id, Order order)
+        public IHttpActionResult PutOrder(int id)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
+            //if (!ModelState.IsValid)
+            //{
+            //    return BadRequest(ModelState);
+            //}
+
+            //if (id != order.Id)
+            //{
+            //    return BadRequest();
+            //}
+
+            Order order = db.Orders.Find(id); //Busca a ordem para ser fechada
+
+            if (order == null) {
+                return NotFound();
             }
 
-            if (id != order.Id)
-            {
-                return BadRequest();
+            if (!order.userName.Equals(User.Identity.Name) &&
+                User.IsInRole("USER")) {
+                return Unauthorized();
             }
+
+            if(order.preco_frete <= 0) {
+                return BadRequest("Calcule o frete antes !");
+            }
+
+            order.status = "Fechado";
 
             db.Entry(order).State = EntityState.Modified;
 
@@ -113,7 +130,7 @@ namespace DM106_TF.Controllers
             order.peso_pedido = 0;
             order.preco_frete = 0;
             order.preco_pedido = 0;
-            order.data_pedido = DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss");
+            order.data_pedido = TimeZoneInfo.ConvertTime(DateTime.Now, TimeZoneInfo.FindSystemTimeZoneById("E. South America Standard Time")).ToString("dd-MM-yyyy HH:mm:ss");
 
             db.Orders.Add(order);
             db.SaveChanges();
