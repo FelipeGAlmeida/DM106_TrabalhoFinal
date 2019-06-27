@@ -146,3 +146,5 @@ C:\Users\Felipe G. Almeida\source\repos\DM106_TF\DM106_TF\obj\Release\DM106_TF.M
 C:\Users\Felipe G. Almeida\source\repos\DM106_TF\DM106_TF\obj\Release\DM106_TF.csproj.GenerateResource.cache
 C:\Users\Felipe G. Almeida\source\repos\DM106_TF\DM106_TF\obj\Release\DM106_TF.Migrations.AddOrderAndOrderItem.resources
 C:\Users\Felipe G. Almeida\source\repos\DM106_TF\DM106_TF\obj\Release\DM106_TF.Migrations.AddRules1.resources
+C:\Users\Felipe G. Almeida\source\repos\DM106_TF\DM106_TF\bin\DM106_TF.XmlSerializers.dll
+C:\Users\Felipe G. Almeida\source\repos\DM106_TF\DM106_TF\obj\Release\DM106_TF.XmlSerializers.dll

@@ -31,15 +31,43 @@ namespace DM106_TF.Models {
         public void setPesoPedido() { //Seta o peso do pedido
             peso_pedido = 0;
             foreach (OrderItem oi in OrderItems) {
-                peso_pedido += oi.Product.peso;
+                peso_pedido += oi.Product.peso * oi.quantidade;
             }
         }
 
-        public void setPreçoPedido() { //Seta o preço do pedido
+        public void setPrecoPedido() { //Seta o preço do pedido
             preco_pedido = 0;
             foreach (OrderItem oi in OrderItems) {
-                preco_pedido += oi.Product.preco;
+                preco_pedido += oi.Product.preco * oi.quantidade;
             }
+        }
+
+        // O cálculo do tamanho de espaço ocupado pelo pedido será calculado com os pedidos lado a lado em comprimento.
+        // Por esse motivo será feita a soma dos comprimentos.
+        public decimal getComprimento() {
+            decimal comp_total = 0;
+            foreach (OrderItem oi in OrderItems) {
+                comp_total += oi.Product.comprimento * oi.quantidade;
+            }
+            return comp_total;
+        }
+
+        // A largura será pega apenas a maior, portanto.
+        public decimal getLargura() {
+            decimal larg_total = 0;
+            foreach (OrderItem oi in OrderItems) {
+                if (larg_total < oi.Product.altura) larg_total = oi.Product.largura;
+            }
+            return larg_total;
+        }
+
+        // A altura tmabém será pega apenas a maior, portanto.
+        public decimal getAltura() {
+            decimal alt_total = 0;
+            foreach (OrderItem oi in OrderItems) {
+                if (alt_total < oi.Product.altura) alt_total = oi.Product.altura;
+            }
+            return alt_total;
         }
 
     }
