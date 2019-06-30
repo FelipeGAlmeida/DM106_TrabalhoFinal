@@ -31,10 +31,10 @@ namespace DM106_TF.Migrations
                     codigo = "COD1",
                     preco = 10,
                     peso = 1,
-                    altura = 1,
-                    largura = 1,
-                    comprimento = 1,
-                    diametro = 1,
+                    altura = 18,
+                    largura = 20,
+                    comprimento = 20,
+                    diametro = 10,
                     Url = "www.siecolasystems.com/produto1"
                 },
                 new Product {
@@ -44,12 +44,12 @@ namespace DM106_TF.Migrations
                     descricao = "descrição produto 2",
                     cor = "Vermelho",
                     modelo = "Modelo2",
-                    preco = 20,
+                    preco = 22,
                     peso = 2,
-                    altura = 2,
-                    largura = 2,
-                    comprimento = 2,
-                    diametro = 2,
+                    altura = 30,
+                    largura = 20,
+                    comprimento = 16,
+                    diametro = 12,
                     Url = "www.siecolasystems.com/produto2"
                 }
             );

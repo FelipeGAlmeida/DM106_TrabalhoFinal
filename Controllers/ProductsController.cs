@@ -27,7 +27,7 @@ namespace DM106_TF.Controllers
         public IHttpActionResult GetProduct(int id) {
             Product product = db.Products.Find(id);
             if (product == null) {
-                return NotFound();
+                return ResponseMessage(Request.CreateErrorResponse(HttpStatusCode.NotFound, "Produto não encontrado!"));
             }
 
             return Ok(product);
@@ -42,15 +42,17 @@ namespace DM106_TF.Controllers
             }
 
             if (id != product.Id) {
-                return BadRequest();
+                return BadRequest("Id fornecido e do produto diferentes!");
             }
 
             if (db.Products.Where(p => (p.codigo == product.codigo) && (p.Id != id)).Count() > 0) {
-                return StatusCode(HttpStatusCode.Forbidden);
+                return ResponseMessage(Request.CreateErrorResponse(HttpStatusCode.Forbidden, "Código já existe!"));
+                //return StatusCode(HttpStatusCode.Forbidden);
             }
 
             if (db.Products.Where(p => (p.modelo == product.modelo) && (p.Id != id)).Count() > 0) {
-                return StatusCode(HttpStatusCode.Forbidden);
+                return ResponseMessage(Request.CreateErrorResponse(HttpStatusCode.Forbidden, "Modelo já existe!"));
+                //return StatusCode(HttpStatusCode.Forbidden);
             }
 
             db.Entry(product).State = EntityState.Modified;
@@ -59,7 +61,7 @@ namespace DM106_TF.Controllers
                 db.SaveChanges();
             } catch (DbUpdateConcurrencyException) {
                 if (!ProductExists(id)) {
-                    return NotFound();
+                    return ResponseMessage(Request.CreateErrorResponse(HttpStatusCode.NotFound, "Produto não encontrado!"));
                 } else {
                     throw;
                 }
@@ -77,11 +79,13 @@ namespace DM106_TF.Controllers
             }
 
             if (db.Products.Where(p => p.codigo == product.codigo).Count() > 0) {
-                return StatusCode(HttpStatusCode.Forbidden);
+                return ResponseMessage(Request.CreateErrorResponse(HttpStatusCode.Forbidden, "Código já existe!"));
+                //return StatusCode(HttpStatusCode.Forbidden);
             }
 
             if (db.Products.Where(p => p.modelo == product.modelo).Count() > 0) {
-                return StatusCode(HttpStatusCode.Forbidden);
+                return ResponseMessage(Request.CreateErrorResponse(HttpStatusCode.Forbidden, "Modelo já existe!"));
+                //return StatusCode(HttpStatusCode.Forbidden);
             }
 
             db.Products.Add(product);
@@ -96,7 +100,7 @@ namespace DM106_TF.Controllers
         public IHttpActionResult DeleteProduct(int id) {
             Product product = db.Products.Find(id);
             if (product == null) {
-                return NotFound();
+                return ResponseMessage(Request.CreateErrorResponse(HttpStatusCode.NotFound, "Produto não encontrado!"));
             }
 
             db.Products.Remove(product);

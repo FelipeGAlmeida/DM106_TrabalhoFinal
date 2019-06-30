@@ -70,5 +70,15 @@ namespace DM106_TF.Models {
             return alt_total;
         }
 
+        // Apenas para fins didáticos o diâmetro será pego o maior também.
+        // Nos testes, este valor se mostrou pouco relevante no calculo do frete (devido ao tipo do pacote, acredito)
+        public decimal getDiametro() {
+            decimal dia_total = 0;
+            foreach (OrderItem oi in OrderItems) {
+                if (dia_total < oi.Product.diametro) dia_total = oi.Product.diametro;
+            }
+            return dia_total;
+        }
+
     }
 }
