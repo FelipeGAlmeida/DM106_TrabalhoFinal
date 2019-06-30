@@ -1,5 +1,5 @@
 # DM106_Final
-Repo destinado à hospedagem do trabalho final da disciplina DM106.
+Repositório destinado à hospedagem do trabalho final da disciplina DM106.
 
 ## Informações de acesso
 
@@ -51,7 +51,7 @@ Alguns produtos já se encontram pré-cadastrados no banco. Estes já estão com
 **Id:** 4  
 **Nome:** produto 4  
 
-Os produtos pré cadastrados foram todos testados pelo site oficial do serviço: http://ws.correios.com.br/calculador/CalcPrecoPrazo.asmx?op=CalcPrecoPrazo
+Os produtos pré cadastrados foram todos testados pelo site oficial do serviço: http://ws.correios.com.br/calculador/CalcPrecoPrazo.asmx?op=CalcPrecoPrazo  
 Existe também a documentação desse serviço: https://www.correios.com.br/a-a-z/pdf/calculador-remoto-de-precos-e-prazos/manual-de-implementacao-do-calculo-remoto-de-precos-e-prazos
 
 ## Pedidos pré cadastrados:
