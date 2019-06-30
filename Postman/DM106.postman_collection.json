@@ -1,0 +1,348 @@
+{
+	"info": {
+		"_postman_id": "fb04a638-3615-4ff7-a0ec-0ba4173152fb",
+		"name": "DM106",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Novo usuário",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "g-YIOv8geO4EG09eE9zyfBVG9J0cNkuxCrYO2q2_F9laJma28bxu-oOORx0WlEwV_mT4t1ttZlN9Nk0XjRDpb61CreszmR13eZeuvFnBQY7Trk908c0VI1IYgL6wlzzTyyu16GOyM9JjHNwtLpUo_CxugpNua5K6MYDYfIVBNKuxLQPwdrWUH1YSeJbi34r-iTM5pxBAXqGfYauWzEsGKALy6AQ29JiKMTutt6psKMkUU9RvHxD9Ub5KyB2Jvd_MOxAee6gZEtKtkIfB16NGJqKyD6L5l-KmByJ2-g6Mux6DLq7XdQNfILVtyXEMYrnju5CBvTd9U9J-GUyrz9xc0r2Jihxe7ot6O1TXQERsiQpgPwP0F4DSWE66C7TbC87qGEkC4iiI2Yn97irVY3_J3d8Y3ZwFbwZHuJYsvAWNXSk93f533oB9ntRRYJkiXF1DKw-b3eHBwcpidnAmpCknBNtLGDBFDmS9KYLvtmqdYuHhCpcg5x0pSM1Qrs-CqmSjq1aJ8IlYkukkSCzi1r48HA",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\t{\r\n\t\"Email\":\t\"paulinhoed@gmail.com\",\r\n\t\"Password\":\t\"Paulinho#1\",\r\n\t\"ConfirmPassword\":\t\"Paulinho#1\"\r\n}"
+				},
+				"url": {
+					"raw": "http://dm106tf.azurewebsites.net/api/account/register",
+					"protocol": "http",
+					"host": [
+						"dm106tf",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"account",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get/Post products",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "g-YIOv8geO4EG09eE9zyfBVG9J0cNkuxCrYO2q2_F9laJma28bxu-oOORx0WlEwV_mT4t1ttZlN9Nk0XjRDpb61CreszmR13eZeuvFnBQY7Trk908c0VI1IYgL6wlzzTyyu16GOyM9JjHNwtLpUo_CxugpNua5K6MYDYfIVBNKuxLQPwdrWUH1YSeJbi34r-iTM5pxBAXqGfYauWzEsGKALy6AQ29JiKMTutt6psKMkUU9RvHxD9Ub5KyB2Jvd_MOxAee6gZEtKtkIfB16NGJqKyD6L5l-KmByJ2-g6Mux6DLq7XdQNfILVtyXEMYrnju5CBvTd9U9J-GUyrz9xc0r2Jihxe7ot6O1TXQERsiQpgPwP0F4DSWE66C7TbC87qGEkC4iiI2Yn97irVY3_J3d8Y3ZwFbwZHuJYsvAWNXSk93f533oB9ntRRYJkiXF1DKw-b3eHBwcpidnAmpCknBNtLGDBFDmS9KYLvtmqdYuHhCpcg5x0pSM1Qrs-CqmSjq1aJ8IlYkukkSCzi1r48HA",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"nome\": \"produto 3\",\n        \"descricao\": \"descrição produto 3\",\n        \"cor\": \"Amarelo\",\n        \"modelo\": \"Modelo3\",\n        \"codigo\": \"COD3\",\n        \"preco\": 30,\n        \"peso\": 3,\n        \"altura\": 3,\n        \"largura\": 3,\n        \"comprimento\": 3,\n        \"diametro\": 3,\n        \"Url\": \"www.siecolasystems.com/produto1\"\n    }"
+				},
+				"url": {
+					"raw": "http://dm106tf.azurewebsites.net/api/products",
+					"protocol": "http",
+					"host": [
+						"dm106tf",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete/Put products",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "g-YIOv8geO4EG09eE9zyfBVG9J0cNkuxCrYO2q2_F9laJma28bxu-oOORx0WlEwV_mT4t1ttZlN9Nk0XjRDpb61CreszmR13eZeuvFnBQY7Trk908c0VI1IYgL6wlzzTyyu16GOyM9JjHNwtLpUo_CxugpNua5K6MYDYfIVBNKuxLQPwdrWUH1YSeJbi34r-iTM5pxBAXqGfYauWzEsGKALy6AQ29JiKMTutt6psKMkUU9RvHxD9Ub5KyB2Jvd_MOxAee6gZEtKtkIfB16NGJqKyD6L5l-KmByJ2-g6Mux6DLq7XdQNfILVtyXEMYrnju5CBvTd9U9J-GUyrz9xc0r2Jihxe7ot6O1TXQERsiQpgPwP0F4DSWE66C7TbC87qGEkC4iiI2Yn97irVY3_J3d8Y3ZwFbwZHuJYsvAWNXSk93f533oB9ntRRYJkiXF1DKw-b3eHBwcpidnAmpCknBNtLGDBFDmS9KYLvtmqdYuHhCpcg5x0pSM1Qrs-CqmSjq1aJ8IlYkukkSCzi1r48HA",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Id\": 1,\n    \"nome\": \"produto 1\",\n    \"descricao\": \"descrição produto 1\",\n    \"cor\": \"Verde\",\n    \"modelo\": \"Modelo1\",\n    \"codigo\": \"COD1\",\n    \"preco\": 10,\n    \"peso\": 1,\n    \"altura\": 18,\n    \"largura\": 20,\n    \"comprimento\": 20,\n    \"diametro\": 10,\n    \"Url\": \"www.siecolasystems.com/produto1\"\n}"
+				},
+				"url": {
+					"raw": "http://dm106tf.azurewebsites.net/api/products/1",
+					"protocol": "http",
+					"host": [
+						"dm106tf",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get/Post Orders",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "g-YIOv8geO4EG09eE9zyfBVG9J0cNkuxCrYO2q2_F9laJma28bxu-oOORx0WlEwV_mT4t1ttZlN9Nk0XjRDpb61CreszmR13eZeuvFnBQY7Trk908c0VI1IYgL6wlzzTyyu16GOyM9JjHNwtLpUo_CxugpNua5K6MYDYfIVBNKuxLQPwdrWUH1YSeJbi34r-iTM5pxBAXqGfYauWzEsGKALy6AQ29JiKMTutt6psKMkUU9RvHxD9Ub5KyB2Jvd_MOxAee6gZEtKtkIfB16NGJqKyD6L5l-KmByJ2-g6Mux6DLq7XdQNfILVtyXEMYrnju5CBvTd9U9J-GUyrz9xc0r2Jihxe7ot6O1TXQERsiQpgPwP0F4DSWE66C7TbC87qGEkC4iiI2Yn97irVY3_J3d8Y3ZwFbwZHuJYsvAWNXSk93f533oB9ntRRYJkiXF1DKw-b3eHBwcpidnAmpCknBNtLGDBFDmS9KYLvtmqdYuHhCpcg5x0pSM1Qrs-CqmSjq1aJ8IlYkukkSCzi1r48HA",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"OrderItems\": [\n        {\n            \"quantidade\": 1,\n            \"ProductId\": 2\n        },\n        {\n            \"quantidade\": 2,\n            \"ProductId\": 4\n        }\n    ],\n    \"userName\": \"jgilsonsi@gmail.com\"\n}"
+				},
+				"url": {
+					"raw": "http://dm106tf.azurewebsites.net/api/orders",
+					"protocol": "http",
+					"host": [
+						"dm106tf",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calc. Frete",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "g-YIOv8geO4EG09eE9zyfBVG9J0cNkuxCrYO2q2_F9laJma28bxu-oOORx0WlEwV_mT4t1ttZlN9Nk0XjRDpb61CreszmR13eZeuvFnBQY7Trk908c0VI1IYgL6wlzzTyyu16GOyM9JjHNwtLpUo_CxugpNua5K6MYDYfIVBNKuxLQPwdrWUH1YSeJbi34r-iTM5pxBAXqGfYauWzEsGKALy6AQ29JiKMTutt6psKMkUU9RvHxD9Ub5KyB2Jvd_MOxAee6gZEtKtkIfB16NGJqKyD6L5l-KmByJ2-g6Mux6DLq7XdQNfILVtyXEMYrnju5CBvTd9U9J-GUyrz9xc0r2Jihxe7ot6O1TXQERsiQpgPwP0F4DSWE66C7TbC87qGEkC4iiI2Yn97irVY3_J3d8Y3ZwFbwZHuJYsvAWNXSk93f533oB9ntRRYJkiXF1DKw-b3eHBwcpidnAmpCknBNtLGDBFDmS9KYLvtmqdYuHhCpcg5x0pSM1Qrs-CqmSjq1aJ8IlYkukkSCzi1r48HA",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://dm106tf.azurewebsites.net/api/orders/frete?id=1",
+					"protocol": "http",
+					"host": [
+						"dm106tf",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"orders",
+						"frete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Close/Delete Orders",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessToken",
+							"value": "Syc1L92d2Ylzbd5DGZntNQSaXJzcikOBXNUWA8g16IIDk14oqYkGkaJqXlH7UdabiXtGdmXeKqWOyuG05GLp_AVpiuvFQCKcG0SsVrBsYkMYiwYQSoFa3DUjDT93Tk7f_0cRQglNvPj3ide2wgYjoNxdtuMRmRJgdY3WPsvIcNjjwP-hvV5cuctbz3OBzdFUtQ-DcvOY-z9UN6p_w7QP7bGmODZn4OBNc1K9AIQATYTbIwOQECLRTXhvbVvU9Rzaj57Eh70vAmZxQgPqz7rsWri8BRKWsmYC7jKgppawTWT2viH0jvdciilHsW9WERrrmyCeqIhp0ky-dS0WfF-Ltv1-hAddoch7jGdH68J0kQkj_wTfnUrqR-ylEsSNSwWdiP9LTTNITMpp3OAiDtTyaUwvw7WHSBsDZuIQHqTvOZzHXDI2SdULGx_d8ToF6oS_r_I9WB4Cyx6L5y2WwF0C9n8cW9irKbioY1HVYZw1QACucshbMZWlWwDGYQ488BNGxyZWvKvofcV4CIIL685lDA",
+							"type": "string"
+						},
+						{
+							"key": "tokenType",
+							"value": "bearer",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://dm106tf.azurewebsites.net/api/orders/9",
+					"protocol": "http",
+					"host": [
+						"dm106tf",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"orders",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Customers [CRM]",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "crmwebapi",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "crmwebapi",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://siecolacrm.azurewebsites.net/api/customers",
+					"protocol": "http",
+					"host": [
+						"siecolacrm",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
